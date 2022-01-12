@@ -53,7 +53,7 @@ def train(data, file_name, params, num_epochs=50, batch_size=128, train_temp=1, 
         return tf.nn.softmax_cross_entropy_with_logits(labels=correct,
                                                        logits=predicted/train_temp)
 
-    sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+    sgd = SGD(learning_rate=0.01, decay=1e-6, momentum=0.9, nesterov=True)
     
     model.compile(loss=fn,
                   optimizer=sgd,
@@ -111,5 +111,5 @@ train(CIFAR(), "models/cifar", [64, 64, 128, 128, 256, 256], num_epochs=50)
 
 #train_distillation(MNIST(), "models/mnist-distilled-100", [32, 32, 64, 64, 200, 200],
 #                   num_epochs=50, train_temp=100)
-train_distillation(CIFAR(), "models/cifar-distilled-100", [64, 64, 128, 128, 256, 256],
-                   num_epochs=50, train_temp=100)
+#train_distillation(CIFAR(), "models/cifar-distilled-100", [64, 64, 128, 128, 256, 256],
+#                   num_epochs=50, train_temp=100)
