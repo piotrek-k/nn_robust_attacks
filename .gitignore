@@ -1,2 +1,4 @@
 /models/
 /cifar-10-batches-bin/
+/cifar-data.tar.gz
+/.ipynb_checkpoints/
