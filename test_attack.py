@@ -10,8 +10,8 @@ import numpy as np
 import time
 
 from setup_cifar import CIFAR, CIFARModel
-from setup_mnist import MNIST, MNISTModel
-from setup_inception import ImageNet, InceptionModel
+#from setup_mnist import MNIST, MNISTModel
+#from setup_inception import ImageNet, InceptionModel
 
 from l2_attack import CarliniL2
 from l0_attack import CarliniL0
